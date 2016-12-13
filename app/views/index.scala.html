@@ -1,12 +1,12 @@
-@(message: String, name: String)
+@(user: models.users.User)
 
 <!-- Pass page title and content {html between braces} to the main view -->
-@main("Home") {
+@main("Home", user) {
   <!-- HTML content for the index view -->
   <div class="row">
       <div class="col-sm-12">
         <div class="well">
-          <h4>@message - @name</h4>
+          <h4>Home page</h4>
         </div>
       </div>
   </div>

@@ -28,6 +28,13 @@
                 <li @if(title == "Home"){class="active"}><a href="@routes.HomeController.index()">Home</a></li>
                 <li @if(title == "About"){class="active"}><a href="@routes.HomeController.about()">About Us</a></li>
                 <li @if(title == "Products"){class="active"}><a href="@routes.HomeController.products()">Products</a></li>
+            <li @if(title == "Login"){class = "active"}>
+               if(user !=null){
+                <a href ="@routes.LoginController.logout()">Logout @user.getName()</a>
+               } else {
+                <a href ="@routes.LoginController.login()">Login</a>
+
+                </li>
             </ul>
     </nav>
     
